@@ -1,17 +1,17 @@
-package com.example.proyecto_moviles
+package com.example.proyecto_moviles.Activities
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
-import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto_moviles.Fragments.DatePickerFragment
 import com.example.proyecto_moviles.Fragments.TimePickerFragment
+import com.example.proyecto_moviles.R
 import org.jetbrains.anko.find
 
 class ActivityAgendar : AppCompatActivity(){
-
+///////////////////////Edit text del layout
     private lateinit var etDate : EditText
     private lateinit var etTime : EditText
 
@@ -33,14 +33,7 @@ class ActivityAgendar : AppCompatActivity(){
     }
 
 
-   // override fun onClick(v: View?) {
-     //   when(v?.id){
-       //     R.id.Fecha_Et ->{
-          //     showDatePickerDialog()
-         //  }
-        //}
-    //}
-
+//////////////////////////////Inicializacion y show de los fragmentos//////////////////
     private fun showDatePickerDialog(){
         val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
 
