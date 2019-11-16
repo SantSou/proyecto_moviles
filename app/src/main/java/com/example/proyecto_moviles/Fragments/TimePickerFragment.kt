@@ -2,6 +2,7 @@ package com.example.proyecto_moviles.Fragments
 
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.app.TimePickerDialog
 import android.content.Context
 import android.os.Bundle
 import android.view.ContextMenu
@@ -13,31 +14,29 @@ import androidx.fragment.app.FragmentActivity
 import com.example.proyecto_moviles.R
 import java.util.*
 
-class DatePickerFragment(private val acontext: Context): DialogFragment() {
+class TimePickerFragment(private val bcontext: Context): DialogFragment() {
 
-    private var listener : DatePickerDialog.OnDateSetListener? = null
+    private var tlistener : TimePickerDialog.OnTimeSetListener? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_date_pick, container, false)
+        val view = inflater.inflate(R.layout.fragment_time_pick, container, false)
         return view
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val c = Calendar.getInstance()
-        val year = c.get(Calendar.YEAR)
-        val month = c.get(Calendar.MONTH)
-        val day = c.get(Calendar.DAY_OF_MONTH)
-
-            return DatePickerDialog(acontext, listener, year, month, day)
-}
+        val hour = c.get(Calendar.HOUR_OF_DAY)
+        val min = c.get(Calendar.MINUTE)
+        return TimePickerDialog(bcontext, tlistener, hour, min, true)
+    }
 
     companion object{
-        fun newInstance(listener: DatePickerDialog.OnDateSetListener, context: Context): DatePickerFragment {
-            val fragment = DatePickerFragment(context)
-            fragment.listener = listener
+        fun newInstance(listener: TimePickerDialog.OnTimeSetListener, context: Context): TimePickerFragment{
+            val fragment = TimePickerFragment(context)
+            fragment.tlistener = listener
             return fragment
         }
     }
