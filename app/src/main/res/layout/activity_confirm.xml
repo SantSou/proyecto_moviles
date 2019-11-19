@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDF6F6"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -23,36 +24,39 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="90dp"
+        android:inputType="none"
         app:layout_constraintTop_toBottomOf="@+id/login_main_title_name"
         android:text="Servicio..."
         />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/estilista_Et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
+        android:inputType="none"
         app:layout_constraintTop_toBottomOf="@+id/Sevicio_Et"
         android:text="Estilista..."
         />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/Fecha_Et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
+        android:inputType="none"
         app:layout_constraintTop_toBottomOf="@+id/estilista_Et"
         android:text="Fecha..."
         />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/Hora_Et"
         android:layout_width="match_parent"
-
+        android:inputType="none"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -61,14 +65,13 @@
         android:text="Fecha..."
         />
 
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_sign_in_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/Hora_Et"
         android:layout_marginStart="30dp"
+        android:background="#FBDDDB"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="100dp"
         app:layout_constraintBottom_toTopOf="@+id/login_bottom_caption"
