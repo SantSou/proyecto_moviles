@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import com.example.proyecto_moviles.ActivityLogin
+import com.example.proyecto_moviles.Activity_Login
 import com.example.proyecto_moviles.R
 import com.parse.ParseUser
 import org.jetbrains.anko.startActivity
@@ -46,7 +46,7 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
             R.id.options_change_user -> {
                 ParseUser.getCurrentUser()
                 ParseUser.logOut()
-                startActivity<ActivityLogin>()
+                startActivity<Activity_Login>()
             }
         }
     }

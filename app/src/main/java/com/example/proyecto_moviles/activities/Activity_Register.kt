@@ -11,7 +11,7 @@ import com.example.proyecto_moviles.R
 import com.parse.ParseUser
 
 
-class ActivityRegister : AppCompatActivity(){
+class Activity_Register : AppCompatActivity(){
 
     private lateinit var mRegister: Button
     private lateinit var mUserName: EditText
