@@ -14,19 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Activity_Login">
-
-        </activity>
-        <activity android:name=".activities.Activity_Register"></activity>
-        <activity android:name=".activities.Activity_Profile"></activity>
-        <activity android:name=".activities.ActivityMain"></activity>
-        <activity android:name=".activities.Activity_Services"></activity>
-        <activity android:name=".activities.Activity_newService">
+        <activity android:name=".activities.Activity_Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.Activity_Register"></activity>
+        <activity android:name=".activities.Activity_Profile"></activity>
+        <activity android:name=".activities.ActivityMain"></activity>
+        <activity android:name=".activities.Activity_Services"></activity>
+        <activity android:name=".activities.Activity_newService"></activity>
 
         <meta-data
             android:name="com.parse.SERVER_URL"
